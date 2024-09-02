@@ -1,0 +1,202 @@
+body {
+    font-family: 'Amiri', serif;
+    background-image: url('parchment-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #3e2723;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #8d6e63;
+    background-image: url('parchment-texture.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.game-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #3e2723;
+    border-bottom: 3px solid #8d6e63;
+    padding-bottom: 10px;
+    font-family: 'Scheherazade', serif;
+}
+
+.hint-box {
+    background-color: rgba(255, 245, 235, 0.9);
+    color: #3e2723;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    min-height: 60px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Scheherazade', serif;
+}
+
+.guess-input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #8d6e63;
+    margin-bottom: 20px;
+    outline: none;
+    font-family: 'Amiri', serif;
+    background-color: #fbf8f0;
+    color: #3e2723;
+}
+
+.guess-input:focus {
+    border-color: #3e2723;
+}
+
+.submit-button {
+    background-color: #8d6e63;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Amiri', serif;
+}
+
+.submit-button:hover,
+.next-button:hover {
+    background-color: #6d4c41;
+    transform: translateY(-3px);
+}
+
+.result-box {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #3e2723;
+    min-height: 60px;
+    padding: 15px;
+    border: 1px solid #8d6e63;
+    border-radius: 8px;
+    background-color: rgba(255, 245, 235, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Scheherazade', serif;
+}
+
+.reset-button {
+    background-color: #d7ccc8;
+    color: #3e2723;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Amiri', serif;
+}
+
+.reset-button:hover {
+    background-color: #bcaaa4;
+    transform: translateY(-3px);
+}
+
+.next-button {
+    background-color: #8d6e63;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Amiri', serif;
+}
+
+.score-box, .attempts-box {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #3e2723;
+    font-family: 'Amiri', serif;
+}
+
+.reveal-button {
+    background-color: #d7ccc8;
+    color: #3e2723;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Amiri', serif;
+}
+
+.reveal-button:hover {
+    background-color: #bcaaa4;
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    .game-title {
+        font-size: 26px;
+    }
+
+    .hint-box, .result-box {
+        font-size: 16px;
+    }
+
+    .submit-button, .next-button, .reset-button, .reveal-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .score-box, .attempts-box {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    .game-title {
+        font-size: 22px;
+    }
+
+    .hint-box, .result-box {
+        font-size: 14px;
+    }
+
+    .submit-button, .next-button, .reset-button, .reveal-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .score-box, .attempts-box {
+        font-size: 14px;
+    }
+}

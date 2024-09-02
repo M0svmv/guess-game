@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة التخمين</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="game" class="game-container">
+        <h1 class="game-title">خمن الكاتب أو الشاعر</h1>
+        <div id="scoreBox" class="score-box">النقاط: 0</div>
+        <div id="attemptsBox" class="attempts-box">المحاولات المتبقية: 3</div>
+        <div id="hint" class="hint-box"></div>
+        <input type="text" id="guessInput" class="guess-input" placeholder="أدخل اسم الشخصية">
+        <button onclick="submitGuess()" class="submit-button">تخمين</button>
+        <button onclick="revealAnswer()" class="reveal-button">إظهار الإجابة</button>
+        <div id="result" class="result-box"></div>
+        <button id="nextQuestionButton" class="next-button" onclick="loadNextCharacter()" style="display: none;">السؤال التالي</button>
+        <button onclick="resetGame()" class="reset-button">إعادة ضبط اللعبة</button>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
